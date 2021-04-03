@@ -19,7 +19,7 @@ function setup() {
   // initialize array of pixels
   for (let r = 0; r < numRows; r++) {
     for (let c = 0; c < numCols; c++) {
-      let i = noise(r*0.05, c*0.05) * 255;
+      let i = transformNoise(noise(r*0.05, c*0.05)) * 255;
       pixelArr.push(i);
     }
   }
@@ -34,6 +34,22 @@ function draw() {
   // }
   drawPixelArr();
   //t += 5;
+}
+
+function transformNoise(n) {
+  if (n < 0.5) {
+    return 0;
+  } else if (n < 0.6) {
+    return 0.2;
+  } else if (n < 0.7) {
+    return 0.4;
+  } else if (n < 0.8) {
+    return 0.5;
+  } else if (n < 0.9) {
+    return 0.8;
+  } else {
+    return 1;
+  }
 }
 
 function changePixel(xpos, ypos, value) {
