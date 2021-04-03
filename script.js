@@ -5,35 +5,35 @@ let rectSide = 10;
 let numRows = canvasWidth/rectSide;
 let numCols = canvasHeight/rectSide;
 let pixelArr = [];
-//let t = 0;
+let t = 0;
 
 function setup() {
   let myCanvas = createCanvas(canvasWidth, canvasHeight);
   rectMode(CORNER);
   noStroke();
   noiseDetail(4, 0.6);
-  frameRate(2);
+  frameRate(1);
 
   background(220);
 
   // initialize array of pixels
   for (let r = 0; r < numRows; r++) {
     for (let c = 0; c < numCols; c++) {
-      let i = transformNoise(noise(r*0.05, c*0.05)) * 255;
+      let i = transformNoise(noise(r*0.05, c*0.05, t)) * 255;
       pixelArr.push(i);
     }
   }
 }
 
 function draw() {
-  //background(220);
-  // for (let r = 0; r < numRows; r++) {
-  //   for (let c = 0; c < numCols; c++) {
-  //     pixelArr[r][c] = noise(t + r*0.05, t +c*0.05) * 255;
-  //   }
-  // }
+  background(220);
   drawPixelArr();
-  //t += 5;
+  for (let r = 0; r < numRows; r++) {
+    for (let c = 0; c < numCols; c++) {
+      pixelArr[r*numCols + c] = transformNoise(noise(t + r*0.05, c*0.05, t)) * 255;
+    }
+  }
+  t += 0.04;
 }
 
 function transformNoise(n) {
