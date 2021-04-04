@@ -7,16 +7,16 @@ let numCols = canvasHeight/rectSide;
 let pixelArr = [];
 let t = 0;
 {
-[color('#ff3366','#ff668c' ,'#ff7a9c'), color('#ff9eb6','#ffc2d1','#141b3e')]
- [color('#1bff0f', '#47ff3d', '#69ff61'), color('#94ff8f','#b6ffb3','#141b3e')] 
-  [color('#1f51ff', '#3d67ff', '#577bff'), color('#7593ff','#94abff','#141b3e')]
-   [color('#bd00ff','#c629ff','#ce47ff' ), color('#da75ff','#e59eff','#141b3e')] 
-    [color('#defe48', '#e2fe67','#e6fe7b'), color('#ebfe94','#f2ffb8','#141b3e')] 
-	[color('#ff3366','#ff668c' ,'#ff7a9c'), color('#ff9eb6','#ffc2d1','#c7f3ff')]
- [color('#1bff0f', '#47ff3d', '#69ff61'), color('#94ff8f','#b6ffb3','#c7f3ff')] 
-  [color('#1f51ff', '#3d67ff', '#577bff'), color('#7593ff','#94abff','#c7f3ff')]
-   [color('#bd00ff','#c629ff','#ce47ff' ), color('#da75ff','#e59eff','#c7f3ff')] 
-    [color('#defe48', '#e2fe67','#e6fe7b'), color('#ebfe94','#f2ffb8','#c7f3ff')]
+[color('#ff3366','#ff668c' ,'#ff7a9c'), color('#ff9eb6','#ffc2d1','#141b3e')];
+ [color('#1bff0f', '#47ff3d', '#69ff61'), color('#94ff8f','#b6ffb3','#141b3e')];
+  [color('#1f51ff', '#3d67ff', '#577bff'), color('#7593ff','#94abff','#141b3e')];
+   [color('#bd00ff','#c629ff','#ce47ff' ), color('#da75ff','#e59eff','#141b3e')]; 
+    [color('#defe48', '#e2fe67','#e6fe7b'), color('#ebfe94','#f2ffb8','#141b3e')];
+	[color('#ff3366','#ff668c' ,'#ff7a9c'), color('#ff9eb6','#ffc2d1','#c7f3ff')];
+ [color('#1bff0f', '#47ff3d', '#69ff61'), color('#94ff8f','#b6ffb3','#c7f3ff')]; 
+  [color('#1f51ff', '#3d67ff', '#577bff'), color('#7593ff','#94abff','#c7f3ff')];
+   [color('#bd00ff','#c629ff','#ce47ff' ), color('#da75ff','#e59eff','#c7f3ff')]; 
+    [color('#defe48', '#e2fe67','#e6fe7b'), color('#ebfe94','#f2ffb8','#c7f3ff')];
 }
 function setup() {
   let myCanvas = createCanvas(canvasWidth, canvasHeight);
