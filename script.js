@@ -7,9 +7,11 @@ let numCols = canvasHeight/rectSide;
 let pixelArr = [];
 let t = 0;
 let colorArr =
-[[color(345, 100, 60), color(345, 100, 70), color(345, 100, 74), color(345, 100, 81) color(345, 100, 88)], // reds
-[color(117, 100, 53), color(117, 100, 62), color(117, 100, 69), color(117, 100, 78) color(117, 100, 85)], // greens
-[color(227, 100, 56), color(227, 100, 62), color(227, 100, 67), color(227, 100, 73) color(227, 100, 79)] // purples
+[[color(345, 100, 60), color(345, 100, 70), color(345, 100, 74), color(345, 100, 81) color(345, 100, 88)color(100, 100, 100, 0)], // reds
+[color(117, 100, 53), color(117, 100, 62), color(117, 100, 69), color(117, 100, 78) color(117, 100, 85) color(100, 100, 100, 0)], // greens
+[color(227, 100, 56), color(227, 100, 62), color(227, 100, 67), color(227, 100, 73) color(227, 100, 79) color(100, 100, 100, 0)], // purples
+[color(284, 100, 50), color(284, 100, 58), color(284, 100, 64), color(284, 100, 73) color(284, 100, 81) color(100, 100, 100, 0)],//blues
+[color(71, 100, 64), color(71, 100, 70), color(71, 100, 74), color(71, 100, 79) color(71, 100, 86) color(100, 100, 100, 0)],//yellows
  ]
 function setup() {
   let myCanvas = createCanvas(canvasWidth, canvasHeight);
