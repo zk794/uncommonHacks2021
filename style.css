@@ -6,8 +6,30 @@ div {
   width: 1000px;
   background-color: powderblue;
   margin: 100px;
+  align:center;
 }
 
 h1 {
   font-family: "Georgia", serif;
+  color:#F7F6AF ;
 }
+
+button {
+  background-color: white;
+  color: black;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ border-radius: 12px;
+  }
+  
+ button:hover {
+  background-color:#01FFFF;
+  color:#7525FD;
+  }
+  
+ body {
+ text-align:center;
+ }
