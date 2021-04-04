@@ -5,9 +5,14 @@
   </head>
   <body style="background-color:hsl(0,0%,50%);">
     <h1><i>sit back and watch the clouds go by</i></h1>
-    <button>new seed</button>
-    <button>new colors</button>
-    <button>change time of day</button>
+    <button onClick="changeSeed()">new seed</button>
+    <button onClick="changeColorSet()">change colors</button>
+    <button onClick="changeTimeDay()">change time of day</button>
+    <button onClick="changeCloudMode()">change cloud mode</button>
+    <br>
+    <button onClick="changeSpeed(-1)">decrease speed</button>
+    <button onClick="changeSpeed(1)">increase speed</button>
+    <button onClick="resetSpeed()">reset speed</button>
     <div>
       <script src="script.js"> </script>
     </div>
