@@ -1,37 +1,59 @@
 
 let canvasWidth = 1000;
 let canvasHeight = 600;
-let rectSide = 20;
+let rectSide = 10;
 let numRows = canvasWidth/rectSide;
 let numCols = canvasHeight/rectSide;
 let pixelArr = [];
+let t = 0;
 
 function setup() {
   let myCanvas = createCanvas(canvasWidth, canvasHeight);
   rectMode(CORNER);
   noStroke();
+  noiseDetail(4, 0.6);
+  frameRate(1);
 
   background(220);
 
   // initialize array of pixels
-  let counter = 0;
   for (let r = 0; r < numRows; r++) {
     for (let c = 0; c < numCols; c++) {
-      let i = 0;
-      if (counter % 3 == 0) {
-        i = 255;
-      } else if (counter % 3 == 1) {
-        i = 100;
-      }
+      let i = transformNoise(noise(r*0.05, c*0.05, t)) * 255;
       pixelArr.push(i);
-      counter = counter + 1;
     }
   }
 }
 
 function draw() {
-  pixelArr[4*numCols + 2] = 50;
+  background(220);
   drawPixelArr();
+  for (let r = 0; r < numRows; r++) {
+    for (let c = 0; c < numCols; c++) {
+      pixelArr[r*numCols + c] = transformNoise(noise(t + r*0.05, c*0.05, t)) * 255;
+    }
+  }
+  t += 0.04;
+}
+
+function transformNoise(n) {
+  if (n < 0.5) {
+    return 0;
+  } else if (n < 0.6) {
+    return 0.2;
+  } else if (n < 0.7) {
+    return 0.4;
+  } else if (n < 0.8) {
+    return 0.5;
+  } else if (n < 0.9) {
+    return 0.8;
+  } else {
+    return 1;
+  }
+}
+
+function changePixel(xpos, ypos, value) {
+
 }
 
 function drawPixelArr() {
