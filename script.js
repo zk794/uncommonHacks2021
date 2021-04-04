@@ -200,7 +200,12 @@ function changePixel(xpos, ypos, value) {
 function drawPixelArr() {
   for (let r = 0; r < numRows; r++) {
     for (let c = 0; c < numCols; c++) {
-      fill(colorArr[colorSet][pixelArr[r*numCols + c]][0], colorArr[colorSet][pixelArr[r*numCols + c]][1], colorArr[colorSet][pixelArr[r*numCols + c]][2]);
+      if (dayNightMode%2 == 0 || pixelArr[r*numCols + c] > 4) { //daytime
+        fill(colorArr[colorSet][pixelArr[r*numCols + c]][0], colorArr[colorSet][pixelArr[r*numCols + c]][1], colorArr[colorSet][pixelArr[r*numCols + c]][2]);
+      } else { //nighttime
+        fill(colorArr[colorSet][pixelArr[r*numCols + c]][0], colorArr[colorSet][pixelArr[r*numCols + c]][1]-20, colorArr[colorSet][pixelArr[r*numCols + c]][2]-20);
+      }
+
       rect(r*rectSide, c*rectSide, rectSide, rectSide);
     }
   }
