@@ -6,24 +6,18 @@ let numRows = canvasWidth/rectSide;
 let numCols = canvasHeight/rectSide;
 let pixelArr = [];
 let t = 0;
-{
-[color('#ff3366','#ff668c' ,'#ff7a9c'), color('#ff9eb6','#ffc2d1','#141b3e')];
- [color('#1bff0f', '#47ff3d', '#69ff61'), color('#94ff8f','#b6ffb3','#141b3e')];
-  [color('#1f51ff', '#3d67ff', '#577bff'), color('#7593ff','#94abff','#141b3e')];
-   [color('#bd00ff','#c629ff','#ce47ff' ), color('#da75ff','#e59eff','#141b3e')]; 
-    [color('#defe48', '#e2fe67','#e6fe7b'), color('#ebfe94','#f2ffb8','#141b3e')];
-	[color('#ff3366','#ff668c' ,'#ff7a9c'), color('#ff9eb6','#ffc2d1','#c7f3ff')];
- [color('#1bff0f', '#47ff3d', '#69ff61'), color('#94ff8f','#b6ffb3','#c7f3ff')]; 
-  [color('#1f51ff', '#3d67ff', '#577bff'), color('#7593ff','#94abff','#c7f3ff')];
-   [color('#bd00ff','#c629ff','#ce47ff' ), color('#da75ff','#e59eff','#c7f3ff')]; 
-    [color('#defe48', '#e2fe67','#e6fe7b'), color('#ebfe94','#f2ffb8','#c7f3ff')];
-}
+let colorArr =
+[[color(345, 100, 60), color(345, 100, 70), color(345, 100, 74), color(345, 100, 81) color(345, 100, 88)], // reds
+[color(117, 100, 53), color(117, 100, 62), color(117, 100, 69), color(117, 100, 78) color(117, 100, 85)], // greens
+[color(227, 100, 56), color(227, 100, 62), color(227, 100, 67), color(227, 100, 73) color(227, 100, 79)] // purples
+ ]
 function setup() {
   let myCanvas = createCanvas(canvasWidth, canvasHeight);
   rectMode(CORNER);
   noStroke();
   noiseDetail(4, 0.6);
   frameRate(1);
+  colorMode(HSL, 360, 100, 100);
 
   background(220);
 
